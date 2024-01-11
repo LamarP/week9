@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+    <button mat-button>
+      <mat-icon>home</mat-icon>
+      CPU Builder
+    </button>
+    <button mat-button routerLink="/authentication" *ngIf="!isAuthenticated">Login / Sign Up</button>
+    <button mat-button routerLink="/cpu-parts-list">Parts List</button>
+    <ng-template [ngIf]="isAuthenticated">
+      <button mat-button routerLink="/cpus" *ngIf="isAuthenticated">Builds</button>
+      <button mat-button (click)="logout()">Logout</button>
+      <button mat-button>Save</button>
+      <button mat-button>Get Data</button>
+    </ng-template>
+</mat-toolbar>

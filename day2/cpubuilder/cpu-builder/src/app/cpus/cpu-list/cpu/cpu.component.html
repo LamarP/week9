@@ -1,0 +1,12 @@
+<a style="cursor: pointer;" [routerLink]="[id]">
+  <mat-card routerLinkActive="active">
+    <mat-card-title>
+      {{ computer.name }}
+    </mat-card-title>
+    <mat-card-content>
+      {{ computer.description }}
+      <br>
+      <img [src]="computer.imagePath" style="max-width: 100%;" [alt]="computer.name">
+    </mat-card-content>
+  </mat-card>
+</a>

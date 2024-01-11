@@ -1,0 +1,8 @@
+<div style="text-align: center; margin-bottom: 2vh;">
+  <button (click)="newCpu()" mat-raised-button style="margin-top: 3vh;">New Cpu</button>
+</div>
+
+<app-cpu
+  *ngFor="let cpu of cpus; let i = index"
+  [computer]="cpu"
+  [id]="i"></app-cpu>
